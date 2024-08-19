@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Lung Guard ",
+    "desc": "Predicts the diseases like COVID-19, pneumonia using Deep learning algorithm by detecting the X-rays",
+    "image": "Portfolio-Website-main/assets/images/projects/lung.jpeg",
+    "links": {
+      "view": "",
+      "code": "https://github.com/Naveenkumar75/Lung-Guard-Lung-Guard-Lung-disease-prediction"
+    }
+  },
+  {
+    "name": "Consultant Stewardship ",
+    "desc": "A Mentor Management system for tracking and organizing mentor-mentee relationships, scheduling sessions, and monitoring progress effectively.",
+    "image": "Portfolio-Website-main/assets/images/projects/mentor.jpeg",
+    "category": "basicweb",
+    "links": {
+      "view": "",
+      "code": "https://github.com/jigar-sable/LinkList"
+    }
+  },
+  {
+    "name": "Railway Reservation System",
+    "desc": "A Railway Reservation System that allows users to book, cancel, and manage train tickets with features like train search and seat availability check.",
+    "image": "Portfolio-Website-main/assets/images/projects/rail.jpeg",
+    "category": "basicweb",
+    "links": {
+      "view": "https://jigar-sable.github.io/JavaScript-Projects/api-projects/saas-jobs",
+      "code": "https://github.com/Naveenkumar75/Netflix-Login-Page"
+    }
+  },
+  {
+    "name": "Netflix Clone",
+    "desc": "A Netflix Login Page clone built with HTML, CSS, and JavaScript, featuring responsive design, form validation, and Netflix-like styling.",
+    "image": "Portfolio-Website-main/assets/images/projects/netflix.jpeg",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/Naveenkumar75/Netflix-Login-Page"
+    }
+  }
+]
