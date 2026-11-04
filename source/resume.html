@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Naveenkumar K - Software Engineer - Resume</title>
+<style>
+@page{size:A4;margin:9mm 12mm}
+*{box-sizing:border-box}
+body{font:8.8pt/1.27 Arial,Helvetica,sans-serif;color:#000;margin:0}
+h1{font-size:21pt;margin:0;letter-spacing:.3px}
+.title{font-size:11pt;font-weight:700;margin:1pt 0 3pt}
+.contact{margin:0 0 2pt}
+h2{font-size:10pt;text-transform:uppercase;letter-spacing:.8px;border-bottom:1.2px solid #000;padding-bottom:2pt;margin:6pt 0 3pt}
+.row{display:flex;justify-content:space-between;gap:12pt;margin-top:4pt}
+.row b{font-weight:700}
+.sub{font-style:italic;margin:0}
+ul{margin:2pt 0 0;padding-left:14pt}
+li{margin:1.2pt 0}
+p{margin:0}
+.k{margin:1.5pt 0}
+a{color:#000;text-decoration:none}
+</style></head><body>
+<h1>Naveenkumar K</h1>
+<p class="title">Software Engineer | Backend and Applied AI</p>
+<p class="contact">Karur, Tamil Nadu, India | naveenkumarkalaiselvan@gmail.com</p>
+<p class="contact">linkedin.com/in/naveenkumarkalai | github.com/Naveenkumar75 | naveenkumar75.github.io</p>
+
+<h2>Summary</h2>
+<p>Software Engineer at Cognizant (Program Analyst) with a B.Tech in Information Technology (2025) and a foundation in Java and Spring Boot. Builds backend services in Java, Go and Python and applied AI systems: retrieval-augmented generation (RAG), vector search, LLM tooling and Model Context Protocol (MCP) servers. Focused on secure, multi-tenant, production-minded design. Seeking product-based and AI engineering roles.</p>
+
+<h2>Technical Skills</h2>
+<p class="k"><b>AI and GenAI:</b> LLMs, RAG, Vector Databases (pgvector), MCP, Prompt Engineering, Generative AI</p>
+<p class="k"><b>Machine Learning:</b> TensorFlow, ANN, CNN, Scikit-learn, Pandas, NumPy, Seaborn</p>
+<p class="k"><b>Languages:</b> Go, Python, Java, TypeScript, JavaScript, SQL</p>
+<p class="k"><b>Backend and Frameworks:</b> FastAPI, Spring Boot, Django, chi, REST APIs, JWT Authentication, Angular</p>
+<p class="k"><b>Databases:</b> PostgreSQL, MySQL, SQLite</p>
+<p class="k"><b>Tools and Integrations:</b> Git, GitHub, Docker, Docker Compose, Razorpay, Microsoft Graph API, SharePoint, OpenPyXL, Apache POI</p>
+
+<h2>Experience</h2>
+<div class="row"><span><b>Program Analyst</b>, Cognizant (CTS) - Remote, Bengaluru</span><span>Jul 2026 - Present</span></div>
+<ul><li>Deliver software as part of a Cognizant project team.</li></ul>
+<div class="row"><span><b>Programmer Analyst Trainee</b>, Cognizant (CTS) - Bangalore</span><span>Jul 2025 - Jun 2026</span></div>
+<ul><li>Worked with Java and Spring Boot in a delivery team.</li></ul>
+<div class="row"><span><b>Java Full Stack Engineer Intern</b> - Chennai</span><span>Mar 2025 - Jun 2025</span></div>
+<ul><li>Developed and tested RESTful APIs using Spring Boot and integrated them with MySQL using Spring Data JPA.</li></ul>
+
+<h2>Projects</h2>
+<div class="row"><span><b>OmniDesk</b> - Multi-tenant customer support platform (Go, PostgreSQL, FastAPI, MCP)</span><span>github.com/Naveenkumar75/omnidesk</span></div>
+<ul>
+<li>Designed a Go and PostgreSQL backend with JWT authentication where every query is scoped by the tenant in the token; an integration test verifies one tenant cannot read another tenant's tickets.</li>
+<li>Implemented a ticket state machine (open, pending, resolved, closed) with transactional status changes, row locking (SELECT FOR UPDATE) and audit events to prevent concurrent conflicting updates.</li>
+<li>Built a FastAPI RAG service: document chunking, embeddings in pgvector, tenant-filtered cosine search, and LLM-drafted replies with citations that degrade gracefully when the model is unavailable.</li>
+<li>Exposed read-only MCP tools (list tickets, get ticket, search knowledge base, suggest reply); evaluated retrieval on a 25-question set (hit@3 of 0.95) and documented known limits.</li>
+</ul>
+<div class="row"><span><b>Bank Customer Churn Prediction</b> (Python, TensorFlow, ANN)</span><span>Solo, 2 months</span></div>
+<ul><li>Built an artificial neural network to predict customer churn and support retention strategy; achieved 85% accuracy using NumPy, Pandas and Seaborn for preparation and analysis.</li></ul>
+<div class="row"><span><b>Lung Guard</b> - Lung Disease Prediction (Python, TensorFlow, CNN)</span><span>Team of 4, 3 months</span></div>
+<ul><li>Trained a convolutional neural network on chest X-rays to detect conditions such as COVID-19 and pneumonia; achieved 90% accuracy using Scikit-learn, NumPy and Pandas.</li></ul>
+<div class="row"><span><b>Consultant Stewardship</b> (HTML, CSS, JavaScript, MySQL)</span><span>Team of 4, 3 months</span></div>
+<ul><li>Built a web platform to digitalise communication between mentors and mentees.</li></ul>
+<p class="k" style="margin-top:4pt"><b>Also:</b> Operations Intelligence Dashboard (Excel automation and AI-powered analytics); data structures and algorithms in Java.</p>
+
+<h2>Education</h2>
+<div class="row"><span><b>Bachelor of Technology, Information Technology</b>, M. Kumarasamy College of Engineering</span><span>2021 - 2025</span></div>
+<p class="sub">CGPA: 7.33</p>
+
+<h2>Certifications</h2>
+<ul>
+<li>Python for Deep Learning, Udemy (September 2024)</li>
+<li>Junior Cyber Security Analyst, Cisco</li>
+<li>STEP Plus, The Hindu</li>
+</ul>
+
+<h2>Languages</h2>
+<p>Tamil, English</p>
+</body></html>
