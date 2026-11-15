@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=20261115b">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -54,6 +54,7 @@
   <main id="main">
     <!-- HERO -->
     <section class="hero" aria-labelledby="name">
+      <div class="hero-main">
       <p class="role rise" style="--d:0">Software Engineer at Cognizant</p>
       <h1 id="name" class="name">
         <span class="line"><span class="rise" style="--d:1">Naveen</span></span>
@@ -67,6 +68,22 @@
           <a class="btn btn-ghost" href="assets/Naveenkumar-Resume.pdf" download>Download resume</a>
         </div>
       </div>
+      </div>
+      <aside class="now rise" style="--d:4" aria-labelledby="now-h">
+        <p class="now-label"><span class="dot" aria-hidden="true"></span>Currently building</p>
+        <h2 id="now-h" class="now-title">OmniDesk</h2>
+        <p class="now-lede">A multi-tenant customer-support backend in Go and PostgreSQL, with AI reply suggestions.</p>
+        <ul class="now-points">
+          <li>Tenant isolation enforced in queries and in the schema</li>
+          <li>SLA worker that is safe to run on several replicas</li>
+          <li>RAG over pgvector and an MCP server for AI assistants</li>
+        </ul>
+        <p class="chips dark"><span>Go</span><span>PostgreSQL</span><span>pgvector</span><span>FastAPI</span></p>
+        <div class="now-links">
+          <a href="#work">Read more</a>
+          <a data-repo="omnidesk" hidden>Code on GitHub &rarr;</a>
+        </div>
+      </aside>
     </section>
 
     <!-- ABOUT -->
@@ -281,7 +298,7 @@
     <a href="#top">Back to top</a>
   </footer>
 
-  <script src="js/config.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/config.js?v=20261115b"></script>
+  <script src="js/main.js?v=20261115b"></script>
 </body>
 </html>
