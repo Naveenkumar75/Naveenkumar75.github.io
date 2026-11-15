@@ -11,7 +11,5 @@ window.SITE_CONFIG = {
   repos: {
     omnidesk: "https://github.com/Naveenkumar75/omnidesk",
     operations: "",   // Operations Intelligence Dashboard repository URL
-    genai: "",        // GenAI applications repository URL
-    dsa: ""           // Java and DSA repository URL
   }
 };

@@ -94,9 +94,10 @@
           <h3 id="od-h">OmniDesk</h3>
           <p class="f-lede">A multi-tenant customer-support backend in Go and PostgreSQL, with an AI service that suggests replies from each tenant's own knowledge base.</p>
           <ul class="f-points">
-            <li>Tenant signup creates the tenant and its first admin in one transaction, so a failure never leaves an orphan.</li>
-            <li>JWT auth carries the tenant; every query is scoped by it, and an integration test proves one tenant can't read another's tickets.</li>
-            <li>Tickets follow an explicit state machine. Status changes take a row lock and write an audit event, so concurrent requests can't both win.</li>
+            <li>Tenant isolation enforced twice: every query is scoped by the tenant in the JWT, and composite foreign keys make the database reject cross-tenant references.</li>
+            <li>Tickets follow an explicit state machine; status changes take a row lock and write an audit event in one transaction.</li>
+            <li>A background SLA worker uses <code>FOR UPDATE SKIP LOCKED</code>, so several replicas can sweep at once and each breach is recorded exactly once.</li>
+            <li>Admin and agent roles, rate-limited login, versioned migrations, structured logs and an OpenAPI spec kept in sync with the router by a test.</li>
             <li>A FastAPI service does RAG over pgvector and exposes read-only tools through an MCP server, using the caller's own token.</li>
           </ul>
           <div class="f-actions">
@@ -112,7 +113,7 @@
       </article>
       <article class="featured" data-cat="ai data" aria-labelledby="ops-h">
         <div class="f-main">
-          <p class="f-tag">AI and ML · Operations</p>
+          <p class="f-tag">AI and ML · Operations · code not public</p>
           <h3 id="ops-h">Operations Intelligence Dashboard</h3>
           <p class="f-lede">Excel automation with AI-powered analytics, so teams read answers instead of rebuilding spreadsheets by hand.</p>
           <ul class="f-points">
@@ -132,7 +133,7 @@
       </article>
       <article class="featured" data-cat="ai" aria-labelledby="churn-h">
         <div class="f-main">
-          <p class="f-tag">AI and ML · Solo project, 2 months</p>
+          <p class="f-tag">AI and ML · Academic project, solo · code not public</p>
           <h3 id="churn-h">Bank customer churn prediction</h3>
           <p class="f-lede">An artificial neural network that predicts which bank customers are likely to leave, so retention teams can act early.</p>
           <ul class="f-points">
@@ -149,7 +150,7 @@
       </article>
       <article class="featured" data-cat="ai" aria-labelledby="lung-h">
         <div class="f-main">
-          <p class="f-tag">AI and ML · Team of 4, 3 months</p>
+          <p class="f-tag">AI and ML · Academic project, team of 4 · code not public</p>
           <h3 id="lung-h">Lung Guard: lung disease prediction</h3>
           <p class="f-lede">A convolutional neural network that reads chest X-rays to flag conditions such as COVID-19 and pneumonia.</p>
           <ul class="f-points">
@@ -165,30 +166,9 @@
           <p class="f-eval"><strong>90%</strong> accuracy on the project's test data.</p>
         </aside>
       </article>
-      <article class="featured" data-cat="ai" aria-labelledby="genai-h">
-        <div class="f-main">
-          <p class="f-tag">Generative AI</p>
-          <h3 id="genai-h">GenAI applications</h3>
-          <p class="f-lede">Applications built around large language models, retrieval and tool use. OmniDesk above is the most complete example.</p>
-          <ul class="f-points">
-            <li>Retrieval-augmented generation over a vector database, with citations.</li>
-            <li>Tool use through MCP servers so a model can act on real systems, not just answer.</li>
-            <li>Prompt design that restricts the model to retrieved context and admits when it lacks an answer.</li>
-          </ul>
-          <div class="f-actions">
-            <a class="btn" data-repo="genai" hidden>View on GitHub</a>
-          </div>
-        </div>
-        <aside class="f-side" aria-label="GenAI applications details">
-          <h4>Stack</h4>
-          <p class="chips"><span>LLMs</span><span>RAG</span><span>Vector databases</span><span>MCP</span><span>Prompt engineering</span></p>
-          <h4>Approach</h4>
-          <p class="f-eval">Ground answers in data, measure retrieval, and fail clearly.</p>
-        </aside>
-      </article>
       <article class="featured" data-cat="backend" aria-labelledby="steward-h">
         <div class="f-main">
-          <p class="f-tag">Backend · Team of 4, 3 months</p>
+          <p class="f-tag">Backend · Academic project, team of 4 · code not public</p>
           <h3 id="steward-h">Consultant Stewardship</h3>
           <p class="f-lede">A web platform that digitalises communication between mentors and mentees.</p>
           <ul class="f-points">
@@ -201,26 +181,6 @@
           <p class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><button data-ev="MySQL">MySQL</button></p>
           <h4>Team</h4>
           <p class="f-eval">Four engineers, three months.</p>
-        </aside>
-      </article>
-      <article class="featured" data-cat="backend" aria-labelledby="dsa-h">
-        <div class="f-main">
-          <p class="f-tag">Fundamentals</p>
-          <h3 id="dsa-h">Java and DSA</h3>
-          <p class="f-lede">Data structures and algorithms implemented from first principles in Java.</p>
-          <ul class="f-points">
-            <li>Core data structures and the algorithms that operate on them.</li>
-            <li>The foundation for how I reason about complexity and performance.</li>
-          </ul>
-          <div class="f-actions">
-            <a class="btn" data-repo="dsa" hidden>View on GitHub</a>
-          </div>
-        </div>
-        <aside class="f-side" aria-label="Java and DSA details">
-          <h4>Stack</h4>
-          <p class="chips"><span>Java</span><span>Data structures</span><span>Algorithms</span></p>
-          <h4>Why it matters</h4>
-          <p class="f-eval">Core computer-science fundamentals in Java.</p>
         </aside>
       </article>
     </section>
