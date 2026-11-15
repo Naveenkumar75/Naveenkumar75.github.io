@@ -63,10 +63,10 @@ main > section { padding-inline: var(--gutter); }
 }
 
 /* hero */
-.hero { max-width: calc(var(--max) + 2 * var(--gutter)); margin: 0 auto; padding-top: clamp(48px, 9vw, 120px); padding-bottom: clamp(48px, 8vw, 100px); }
+.hero { max-width: calc(var(--max) + 2 * var(--gutter)); margin: 0 auto; padding-top: clamp(40px, 6vw, 80px); padding-bottom: clamp(48px, 8vw, 100px); }
 .role { margin: 0 0 12px; color: var(--signal); font-weight: 600; }
 .name {
-  margin: 0; font: 800 clamp(3.6rem, 17vw, 13.5rem)/0.88 var(--display);
+  margin: 0; font: 800 clamp(3rem, min(9vw, 12vh), 7rem)/0.9 var(--display);
   letter-spacing: -0.055em; font-variation-settings: "opsz" 96;
 }
 .line { display: block; overflow: hidden; padding-bottom: .06em; }
